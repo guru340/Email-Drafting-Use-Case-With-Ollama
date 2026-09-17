@@ -1,6 +1,7 @@
 package com.example.Email.Drafting.Use.Case.With.Ollama.Controller;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class OllamaController {
     private final  ChatClient chatClient;
 
 
-    public OllamaController(ChatClient chatClient) {
+    public OllamaController(@Qualifier("ollamaChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 
