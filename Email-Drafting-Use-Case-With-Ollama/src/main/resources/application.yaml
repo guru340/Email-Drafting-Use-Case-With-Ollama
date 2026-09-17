@@ -1,5 +1,4 @@
-server:
-  port:8081
+
 
 spring:
   application:
@@ -12,3 +11,5 @@ spring:
           model: mistral:7b
           temperature: 0.7
           num-predict: 512
+server:
+  port: 8080
